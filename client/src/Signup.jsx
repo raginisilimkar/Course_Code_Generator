@@ -30,7 +30,7 @@ function Signup() {
     //fetch data from register api
     try {
       await axios.post("/axios/register", { name, email, password });
-      navigate("/login"); 
+      navigate("/axios/login"); 
     } catch (error) {     
       setErrors({ general: error.response?.data?.error || "Registration failed. Try again." });
     }
