@@ -41,7 +41,7 @@ const Home = () => {
     }
     
     try {
-      const response = await axios.post("http://127.0.0.1:3001/generatecode", {
+      const response = await axios.post("/generatecode", {
         courseName,
         selectedSheet,
       });

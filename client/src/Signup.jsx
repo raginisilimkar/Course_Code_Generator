@@ -29,7 +29,7 @@ function Signup() {
     
     //fetch data from register api
     try {
-      await axios.post("http://localhost:3001/register", { name, email, password });
+      await axios.post("/register", { name, email, password });
       navigate("/login"); 
     } catch (error) {     
       setErrors({ general: error.response?.data?.error || "Registration failed. Try again." });

@@ -13,7 +13,7 @@ function ForgotPassword() {
   const handleVerifyEmail = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3001/verify-email', { email });
+      const response = await axios.post('/verify-email', { email });
       if (response.data.success) {
         setEmailVerified(true);
         setMessage("Email verified! Enter your new password.");
