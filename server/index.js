@@ -18,7 +18,13 @@ const Course =require('./models/Course')
 
 const app = express()
 app.use(express.json())
-app.use(cors());
+
+
+app.use(cors({
+   origin: "*", // ✅ Vercel domain
+  credentials: true
+}));
+
 
 //connecting to mongodb
 mongoose.connect(process.env.MONGO_URI);
